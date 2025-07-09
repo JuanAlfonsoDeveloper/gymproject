@@ -3,6 +3,6 @@ def main():
     print("1. Registrar Usuario")
     print("2. Salir")
 
-    opcion = input("selecione una opción")
-     
-    main()
+    opcion = input("Seleccione una opción: ")
+
+main()
