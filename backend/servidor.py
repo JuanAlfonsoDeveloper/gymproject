@@ -2,17 +2,7 @@
 from conexion import conectar
 import hashlib
 
-
-def main():
-    print("---Menu del servidor---")
-    print("1. Registrar Usuario")
-    print("2. Salir")
-
-    opcion = input("Seleccione una opción: ")
-
-
-    #Opcines del menu
-    if opcion == "1":
+def registrar_usuario():
         nombre = input("Digite su nombre: ")
         apellido = input("Digite su apellido: ")
         correo = input("Digite su correo: ")
@@ -33,6 +23,16 @@ def main():
         cursor.close()
         conexion.close()
 
+
+def main():
+    print("---Menu del servidor---")
+    print("1. Registrar Usuario")
+    print("2. Salir")
+
+    opcion = input("Seleccione una opción: ")
+    #Opcines del menu
+    if opcion == "1": 
+        registrar_usuario()
 main()
 
-def
+
