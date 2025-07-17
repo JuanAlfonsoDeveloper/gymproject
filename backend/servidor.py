@@ -30,6 +30,16 @@ def registrar_usuario():
 #-- FUNCIÓN PARA LA LISTA DE PRECIOS--#
 
 def lista_usuarios():
+     conexion = conectar()
+     cursor = conexion.cursor()
+     sql = "SELECT id_usuario, nombre_usuario, apellido_usuario, correo_usuario, telefono_usuario FROM usuario"
+     cursor.execute(sql)
+     usuarios = cursor.fetchall()
+     for usuario in usuarios: 
+          print(usuario)
+     cursor.close()
+     conexion.close()
+lista_usuarios()
 
 #-- FUNCIÓN PARA EL MENU --#
 def main():
