@@ -2,6 +2,9 @@
 from conexion import conectar
 import hashlib
 
+#-- FUNCIÓN PARA REGISTRAR USUARIOS --#
+
+
 def registrar_usuario():
         nombre = input("Digite su nombre: ")
         apellido = input("Digite su apellido: ")
@@ -24,15 +27,23 @@ def registrar_usuario():
         conexion.close()
 
 
+#-- FUNCIÓN PARA LA LISTA DE PRECIOS--#
+
+def lista_usuarios():
+
+#-- FUNCIÓN PARA EL MENU --#
 def main():
     print("---Menu del servidor---")
     print("1. Registrar Usuario")
     print("2. Salir")
+    print("3. Lista de Usuarios")
 
     opcion = input("Seleccione una opción: ")
     #Opcines del menu
     if opcion == "1": 
         registrar_usuario()
+    elif opcion == "3":
+        lista_usuarios()
 main()
 
 
